@@ -1,45 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Click Counter — Bootcamp II</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Counter Extension</title>
   <style>
-    body{font-family:Arial,Helvetica,sans-serif;padding:24px;max-width:900px;margin:0 auto}
-    header{display:flex;align-items:center;gap:16px}
-    .btn{display:inline-block;padding:8px 12px;border-radius:6px;border:1px solid #222;text-decoration:none}
-    pre{background:#f4f4f4;padding:12px;border-radius:6px;overflow:auto}
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      color: #ec0089;
+    }
+    img {
+      max-width: 150px;
+      margin: 10px 0;
+    }
+    a.button {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 10px 20px;
+      background-color: #ec0089;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    a.button:hover {
+      background-color: #d4007a;
+    }
+    .section {
+      margin-bottom: 30px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    pre {
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <img src="/icons/icon128.png" alt="logo" width="64" height="64" />
-    <div>
-      <h1>Click Counter</h1>
-      <p>Extensão Chrome MV3 — Contador de cliques persistente.</p>
-    </div>
-  </header>
 
-  <section>
-    <h2>Como instalar (modo desenvolvedor)</h2>
+  <h1>Click Counter — Extensão Chrome</h1>
+
+  <div class="section">
+    <h2>Sobre a extensão</h2>
+    <p>Click Counter é uma extensão simples para o Google Chrome que conta os cliques do usuário. Cada clique gera partículas animadas no popup!</p>
+    <img src="../icons/icon128.png" alt="Ícone da extensão">
+  </div>
+
+  <div class="section">
+    <h2>Instalação manual</h2>
     <ol>
-      <li>Acesse <code>chrome://extensions</code> e ative <strong>Developer mode</strong>.</li>
+      <li>Acesse <code>chrome://extensions</code> no Chrome.</li>
+      <li>Ative o <strong>Developer mode</strong> no canto superior direito.</li>
       <li>Clique em <strong>Load unpacked</strong> e selecione a pasta do projeto.</li>
+      <li>Abra o popup pelo ícone da extensão e teste os cliques.</li>
     </ol>
-  </section>
+  </div>
 
-  <section>
+  <div class="section">
     <h2>Download</h2>
-    <p>Depois de publicar uma Release no GitHub, aqui aparecerá o link para o .zip.</p>
-  </section>
+    <a class="button" href="https://github.com/<usuario>/bootcamp2-chrome-ext-seu-eddyocn/archive/refs/heads/main.zip" target="_blank">
+      Baixar extensão (.zip)
+    </a>
+  </div>
 
-  <section>
-    <h2>Notas</h2>
-    <p>Permissões mínimas: <code>storage</code>. Sem host_permissions.</p>
-  </section>
+  <div class="section">
+    <h2>Exemplo do popup</h2>
+    <p>Este é um exemplo de como o popup da extensão aparece:</p>
+    <img src="../docs/popup-example.png" alt="Print do popup">
+    <p>(Substitua esta imagem pelo print real do seu popup)</p>
+  </div>
 
-  <footer>
-    <p>Licença: MIT</p>
-  </footer>
+  <div class="section">
+    <h2>Permissões</h2>
+    <ul>
+      <li><strong>storage</strong> — para salvar o contador de cliques</li>
+      <li><strong>tabs</strong> — opcional, se quiser interagir com abas</li>
+    </ul>
+  </div>
+
 </body>
 </html>
